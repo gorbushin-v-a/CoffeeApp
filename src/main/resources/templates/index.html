@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Кофейная машина</title>
+</head>
+<body>
+<div align="center">
+    <h2>Кофейная машина</h2>
+    <h3>Количество ингредиентов</h3>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Кофе, мг</th>
+            <th th:text="${coffeeMachine.coffee}"></th>
+            <th>
+                <form action="#" th:action="@{/updateCoffee}" th:object="${coffeeMachine}" method="post">
+                    <input type="number" th:field="*{coffee}"/>
+                    <input type="submit" value="Добавить">
+                </form>
+            </th>
+        </tr>
+        <tr>
+            <th>Вода, мг</th>
+            <th th:text="${coffeeMachine.water}"></th>
+            <th>
+                <form action="#" th:action="@{/updateWater}" th:object="${coffeeMachine}" method="post">
+                    <input type="number" th:field="*{water}"/>
+                    <input type="submit" value="Добавить">
+                </form>
+            </th>
+        </tr>
+        <tr>
+            <th>Молоко, мг</th>
+            <th th:text="${coffeeMachine.milk}"></th>
+            <th>
+                <form action="#" th:action="@{/updateMilk}" th:object="${coffeeMachine}" method="post">
+                    <input type="number" th:field="*{milk}"/>
+                    <input type="submit" value="Добавить">
+                </form>
+            </th>
+        </tr>
+    </table>
+
+    <h2>Напитки</h2>
+    <h3><a href="/new">Создать новый рецепт</a></h3>
+    <table border="1" cellpadding="5">
+        <tr>
+<!--            <th>ID</th>-->
+            <th>Напиток</th>
+            <th>Кофе, мг</th>
+            <th>Вода, мг</th>
+            <th>Молоко, мг</th>
+            <th>Время приготовления, мс</th>
+            <th>Количество заказов</th>
+            <th>Удаление</th>
+            <th>Заказ</th>
+        </tr>
+            <tr th:each="drink : ${listDrink}">
+<!--                <td th:text="${drink.id}"></td>-->
+                <td th:text="${drink.name}"></td>
+                <td th:text="${drink.coffee}"></td>
+                <td th:text="${drink.water}"></td>
+                <td th:text="${drink.milk}"></td>
+                <td th:text="${drink.cooking_time}"></td>
+                <td th:text="${drink.orders}"></td>
+                <td>
+                    <a th:href="@{/delete?id={id}(id=${drink.id})}">Удалить рецепт</a>
+                </td>
+                <td>
+                    <a th:href="@{/order?id={id}(id=${drink.id})}">Заказать</a>
+                </td>
+            </tr>
+    </table>
+</div>
+<br>
+<div align="center">
+    <h2>Лог действий</h2>
+    <textarea th:text="${logText}" rows="30" cols="45"></textarea>
+</div>
+</body>
+</html>
