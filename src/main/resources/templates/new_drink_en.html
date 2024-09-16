@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New drink</title>
+</head>
+<body>
+<div align="center">
+    <h2>New drink</h2>
+    <form action="#" th:action="@{/new}" th:object="${drink}" method="post">
+        <table border="0" cellpadding="5">
+            <tr>
+                <td>Name: </td>
+                <td><input type="text" maxlength="40" th:field="*{name}" /></td>
+            </tr>
+            <tr>
+                <td>Coffee, mg: </td>
+                <td><input type="number" th:field="*{coffee}" /></td>
+            </tr>
+            <tr>
+                <td>Water, mg: </td>
+                <td><input type="number" th:field="*{water}" /></td>
+            </tr>
+            <tr>
+                <td>Milk, mg: </td>
+                <td><input type="number" th:field="*{milk}" /></td>
+            </tr>
+            <tr>
+                <td>Cooking time, ms: </td>
+                <td><input type="number" th:field="*{cooking_time}" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Add"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
