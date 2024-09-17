@@ -1,8 +1,8 @@
-package com.example.demo.service;
+package com.example.coffeeApp.service;
 
-import com.example.demo.config.Dictionary;
-import com.example.demo.entity.CoffeeMachine;
-import com.example.demo.repo.CoffeeMachineRepository;
+import com.example.coffeeApp.config.Dictionary;
+import com.example.coffeeApp.entity.CoffeeMachine;
+import com.example.coffeeApp.repo.CoffeeMachineRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

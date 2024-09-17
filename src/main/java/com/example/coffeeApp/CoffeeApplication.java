@@ -1,13 +1,13 @@
-package com.example.demo;
+package com.example.coffeeApp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoApplication {
+public class CoffeeApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(CoffeeApplication.class, args);
 	}
 
 }

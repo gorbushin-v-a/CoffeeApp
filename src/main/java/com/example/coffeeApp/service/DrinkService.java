@@ -1,9 +1,9 @@
-package com.example.demo.service;
+package com.example.coffeeApp.service;
 
-import com.example.demo.config.Dictionary;
-import com.example.demo.entity.CoffeeMachine;
-import com.example.demo.entity.Drink;
-import com.example.demo.repo.DrinkRepository;
+import com.example.coffeeApp.config.Dictionary;
+import com.example.coffeeApp.entity.CoffeeMachine;
+import com.example.coffeeApp.entity.Drink;
+import com.example.coffeeApp.repo.DrinkRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

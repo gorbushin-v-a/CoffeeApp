@@ -1,6 +1,6 @@
-package com.example.demo.repo;
+package com.example.coffeeApp.repo;
 
-import com.example.demo.entity.CoffeeMachine;
+import com.example.coffeeApp.entity.CoffeeMachine;
 import org.springframework.data.repository.CrudRepository;
 
 public interface CoffeeMachineRepository extends CrudRepository<CoffeeMachine, Long> {

@@ -1,10 +1,10 @@
-package com.example.demo.controller;
+package com.example.coffeeApp.controller;
 
-import com.example.demo.config.Dictionary;
-import com.example.demo.entity.CoffeeMachine;
-import com.example.demo.service.CoffeeMachineService;
-import com.example.demo.service.DrinkService;
-import com.example.demo.entity.Drink;
+import com.example.coffeeApp.config.Dictionary;
+import com.example.coffeeApp.entity.CoffeeMachine;
+import com.example.coffeeApp.service.CoffeeMachineService;
+import com.example.coffeeApp.service.DrinkService;
+import com.example.coffeeApp.entity.Drink;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
