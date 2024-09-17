@@ -11,6 +11,7 @@ import java.util.ResourceBundle;
 @Slf4j
 @Component
 public class Dictionary {
+
     private static ResourceBundle lines;
 
     public static String getString(String name) {
@@ -26,4 +27,5 @@ public class Dictionary {
     private void updateLocale(@Value("${app.lang}") String lang) {
         lines = ResourceBundle.getBundle("lines", new Locale(lang));
     }
+
 }
